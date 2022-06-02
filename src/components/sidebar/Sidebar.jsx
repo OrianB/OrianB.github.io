@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./Sidebar.scss";
 
 import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
@@ -20,12 +21,12 @@ class Sidebar extends Component {
 						<p className="title">MAIN</p>
 						<li>
 							<EmojiEmotionsIcon className="icon" />
-							<span>Portfolio</span>
+							<Link to="/">Portfolio</Link>
 						</li>
 						<p className="title">WARFRAME</p>
 						<li>
 							<HubIcon className="icon" />
-							<span>Hub</span>
+							<Link to="/warframe/hub">Hub</Link>
 						</li>
 						<li>
 							<CalculateIcon className="icon" />

@@ -48,8 +48,12 @@ export class Widget extends Component {
 						new Date(cycle.expiry).getTime() - new Date().getTime();
 					let timeLeftDate = new Date(timeLeftMilliseconds);
 					let timeLeft = {
-						hours: Math.floor((timeLeftMilliseconds / (1000 * 60 * 60)) % 24),
-						minutes: Math.floor((timeLeftMilliseconds / 1000 / 60) % 60),
+						hours: Math.floor(
+							(timeLeftMilliseconds / (1000 * 60 * 60)) % 24
+						),
+						minutes: Math.floor(
+							(timeLeftMilliseconds / 1000 / 60) % 60
+						),
 						seconds: Math.floor((timeLeftMilliseconds / 1000) % 60),
 					};
 					console.log(cycle);
@@ -60,7 +64,7 @@ export class Widget extends Component {
 						icon: icon,
 						expiry: cycle.expiry,
 						timeLeft:
-                            timeLeft.hours +
+							timeLeft.hours +
 							"H " +
 							timeLeft.minutes +
 							"M " +
