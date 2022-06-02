@@ -3,6 +3,8 @@ import "./Hub.scss";
 
 import Navbar from "../../../components/navbar/Navbar";
 import Sidebar from "../../../components/sidebar/Sidebar";
+import Widget from "../../../components/widget/Widget";
+
 
 class Hub extends Component {
 	render() {
@@ -11,7 +13,11 @@ class Hub extends Component {
 				<Sidebar />
 				<div className="hubContainer">
 					<Navbar />
-					hub container
+					<div className="widgets">
+						<Widget type="cetus" />
+						<Widget type="vallis" />
+						<Widget type="cambion" />
+					</div>
 				</div>
 			</div>
 		);
