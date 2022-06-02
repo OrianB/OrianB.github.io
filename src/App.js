@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 
 import Home from "./pages/home/Home";
 import Hub from "./pages/warframe/hub/Hub";
@@ -8,7 +8,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<BrowserRouter>
+				<HashRouter>
 					<Routes>
 						<Route path="/">
 							<Route index element={<Home />} />
@@ -18,7 +18,7 @@ class App extends Component {
 							</Route>
 						</Route>
 					</Routes>
-				</BrowserRouter>
+				</HashRouter>
 			</div>
 		);
 	}
